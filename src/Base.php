@@ -1,8 +1,8 @@
 <?php
 
-namespace UserProvider;
+namespace MenuProvider;
 
-use UserProvider\Core\Curl;
+use MenuProvider\Core\Curl;
 
 class Base
 {
