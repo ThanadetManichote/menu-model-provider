@@ -4,96 +4,96 @@ return [
     'method_list' => ['login', 'getMenuList', 'getMenuDetail', 'createMenu', 'updateMenu', 'deleteMenu', 'changePassword'],
     'login' => [
         'params' => [
-            'username' => 'required',
+            'menuname' => 'required',
             'password' => 'required',
             'ref_type' => 'required',
         ],
         'output' => [
-            'attributes.username'   => 'Username',
+            'attributes.menuname'   => 'Menuname',
             'attributes.ref_type'   => 'Reference Type',
             'attributes.ref_id'     => 'Reference ID',
-            'attributes.status'     => 'User Status',
+            'attributes.status'     => 'Menu Status',
             'attributes.created_at' => 'Create date time',
             'attributes.updated_at' => 'Update date time',
-            'id'                    => 'User ID',
+            'id'                    => 'Menu ID',
         ]
     ],
-    'getUserList' => [
+    'getMenuList' => [
         'params' => [
-            'username' => 'not required',
+            'menuname' => 'not required',
             'ref_type' => 'not required',
             'ref_id'   => 'not required',
             'limit'    => 'not required',
             'offset'   => 'not required',
-            'order_by' => 'not required (ex => username:asc)',
+            'order_by' => 'not required (ex => menuname:asc)',
         ],
         'output' => [
             [
-                'attributes.username'   => 'Username',
+                'attributes.menuname'   => 'Menuname',
                 'attributes.ref_type'   => 'Reference Type',
                 'attributes.ref_id'     => 'Reference ID',
-                'attributes.status'     => 'User Status',
+                'attributes.status'     => 'Menu Status',
                 'attributes.created_at' => 'Create date time',
                 'attributes.updated_at' => 'Update date time',
-                'id'                    => 'User ID',
+                'id'                    => 'Menu ID',
             ]
         ]
     ],
-    'getUserList' => [
+    'getMenuList' => [
         'params' => [],
         'output' => [
-            'attributes.username'   => 'Username',
+            'attributes.menuname'   => 'Menuname',
             'attributes.ref_type'   => 'Reference Type',
             'attributes.ref_id'     => 'Reference ID',
-            'attributes.status'     => 'User Status',
+            'attributes.status'     => 'Menu Status',
             'attributes.created_at' => 'Create date time',
             'attributes.updated_at' => 'Update date time',
-            'id'                    => 'User ID',
+            'id'                    => 'Menu ID',
         ]
     ],
-    'createUser' => [
+    'createMenu' => [
         'params' => [
-            'username' => 'required',
+            'menuname' => 'required',
             'password' => 'required',
             'ref_type' => 'required',
             'status'   => 'required (active/inactive)',
         ],
         'output' => [
-            'attributes.username'   => 'Username',
+            'attributes.menuname'   => 'Menuname',
             'attributes.password'   => 'Password',
             'attributes.ref_type'   => 'Reference Type',
             'attributes.ref_id'     => 'Reference ID',
             'attributes.created_at' => 'Create date time',
             'attributes.updated_at' => 'Update date time',
-            'id'                    => 'User ID',
+            'id'                    => 'Menu ID',
         ]
     ],
-    'updateUser' => [
+    'updateMenu' => [
         'params' => [
             'id'       => 'required'
         ],
         'output' => [
-            'attributes.username'   => 'Username',
+            'attributes.menuname'   => 'Menuname',
             'attributes.password'   => 'Password',
             'attributes.ref_type'   => 'Reference Type',
             'attributes.ref_id'     => 'Reference ID',
             'attributes.created_at' => 'Create date time',
             'attributes.updated_at' => 'Update date time',
-            'id'                    => 'User ID',
+            'id'                    => 'Menu ID',
         ]
     ],
-    'deleteUser' => [
+    'deleteMenu' => [
         'params' => [
             'id'       => 'required'
         ],
         'output' => [
-            'attributes.username'   => 'Username',
+            'attributes.menuname'   => 'Menuname',
             'attributes.password'   => 'Password',
             'attributes.ref_type'   => 'Reference Type',
             'attributes.ref_id'     => 'Reference ID',
             'attributes.created_at' => 'Create date time',
             'attributes.updated_at' => 'Update date time',
-            'id'                    => 'User ID',
+            'id'                    => 'Menu ID',
         ]
     ],
     'changePassword' => [
@@ -102,25 +102,25 @@ return [
             'new' => 'required',
         ],
         'output' => [
-            'attributes.username'   => 'Username',
+            'attributes.menuname'   => 'Menuname',
             'attributes.password'   => 'Password',
             'attributes.ref_type'   => 'Reference Type',
             'attributes.ref_id'     => 'Reference ID',
             'attributes.created_at' => 'Create date time',
             'attributes.updated_at' => 'Update date time',
-            'id'                    => 'User ID',
+            'id'                    => 'Menu ID',
         ]
     ],
     'configs' => [
-        'user' => [
-            'url'             => 'http://ms-user-api.develop/',
-            'login'           => 'users/login',
-            'list'            => 'users',
-            'detail'          => 'users/[id]',
-            'create'          => 'users',
-            'update'          => 'users/[id]',
-            'delete'          => 'users/[id]',
-            'change_password' => 'users/[id]/change/password',
+        'menu' => [
+            'url'             => 'http://ms-menu-api.develop/',
+            'login'           => 'menus/login',
+            'list'            => 'menus',
+            'detail'          => 'menus/[id]',
+            'create'          => 'menus',
+            'update'          => 'menus/[id]',
+            'delete'          => 'menus/[id]',
+            'change_password' => 'menus/[id]/change/password',
         ],
     ]
 ];
